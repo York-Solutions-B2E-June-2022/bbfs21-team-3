@@ -100,7 +100,7 @@ public class Inventory {
         return availDate;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategory() {
+        return category.getCategory();
     }
 }
