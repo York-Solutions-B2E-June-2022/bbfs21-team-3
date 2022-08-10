@@ -1,6 +1,11 @@
+.container {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 .product {
-  border: 1px solid gainsboro;
-  border-radius: 0.25rem;
+  border: 1px solid black;
+  border-right: 0.25rem;
 }
 
 .product > .header {
@@ -11,13 +16,13 @@
 }
 
 .product > .body {
+  padding: .5rem;
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
 }
 
 .product > .footer {
-  padding: 0.5rem;
+  padding: .5rem;
   display: flex;
   justify-content: space-between;
 }

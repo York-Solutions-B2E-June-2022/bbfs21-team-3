@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {IProduct} from "../interfaces/IProduct";
 import {DataService} from "../data.service";
 
 @Component({
@@ -7,19 +8,14 @@ import {DataService} from "../data.service";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() product: any;
-  @Input() inCart: boolean = false;
 
+  @Input() product!: IProduct
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
   }
 
   addToCart() {
-//function will be created in data service
-  }
-
-  updateCartCount($event: any) {
-//function will be created in data service
+    this.dataService.addItemToCart(this.product)
   }
 }

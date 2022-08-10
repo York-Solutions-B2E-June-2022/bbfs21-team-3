@@ -22,7 +22,6 @@ public class Account {
         this.username = username;
         this.password = password;
         this.role = role;
-
     }
 
     public String getUsername() {
