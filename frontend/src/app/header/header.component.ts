@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-header',
@@ -7,16 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  username!:string
+  password!:string
+  result!: string
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
   }
 
-  onLogin() {
+  OnClick() {
+
+    this.dataService.onLogin(this.username, this.password)
     console.log("login button works")
   }
 
   onRegister() {
-    console.log("register button works")
+    this.result = this.dataService.createUser(this.username, this.password);
   }
 }
