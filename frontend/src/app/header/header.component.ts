@@ -12,4 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onLogin() {
+    console.log("login button works")
+  }
+
+  onRegister() {
+    console.log("register button works")
+  }
 }
