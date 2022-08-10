@@ -24,6 +24,10 @@ public class Account {
         this.role = role;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getUsername() {
         return username;
     }
