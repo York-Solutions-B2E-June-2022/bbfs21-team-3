@@ -1,0 +1,22 @@
+<div class="product">
+
+
+  <div class="modal-header">
+    <div>Product name goes here</div>
+  </div>
+
+  <div class="modal-body">
+    <div> Product Image goes here</div>
+    <div>Product stock quantity goes here</div>
+
+  </div>
+
+  <div class="modal-footer">
+    <div>Product Price and currency goes here</div>
+    <button *ngIf="!inCart" (click)="addToCart()">Add to Cart</button>
+  </div>
+
+  <div *ngIf="inCart">
+    <input type="number" [ngModel]="product.count" (ngModelChange)="updateCartCount($event)">
+  </div>
+  </div>
