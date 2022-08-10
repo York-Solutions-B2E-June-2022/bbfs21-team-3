@@ -1,0 +1,79 @@
+{
+  "products": [
+    {
+      "price": 110,
+      "priceDate": "01/01/2022",
+      "map": 12,
+      "mapDate": "01/02/2022",
+      "sale": 20,
+      "saleDate": "02/02/2022",
+      "cost": 15,
+      "name": "CHECK PRINT SHIRT",
+      "description": "shirt made with 100% cotton",
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "discontinued": false,
+      "availDate": "01/02/2022",
+      "category": "shirt"
+    },
+    {
+      "price": 91,
+      "priceDate": "01/01/2022",
+      "map": 12,
+      "mapDate": "01/02/2022",
+      "sale": 20,
+      "saleDate": "02/02/2022",
+      "cost": 15,
+      "name": "GLORIA HIGH LOGO SNEAKER",
+      "description": "Gorilla sneaker",
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+      "discontinued": false,
+      "availDate": "01/02/2022",
+      "category": "shoe"
+    },
+    {
+      "price": 94.5,
+      "priceDate": "01/01/2022",
+      "map": 12,
+      "mapDate": "01/02/2022",
+      "sale": 20,
+      "saleDate": "02/02/2022",
+      "cost": 15,
+      "name": "CATE RIGID BAG",
+      "description": "cotton tote bag",
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+      "discontinued": false,
+      "availDate": "01/02/2022",
+      "category": "bag"
+    },
+    {
+      "price": 438.9,
+      "priceDate": "01/01/2022",
+      "map": 12,
+      "mapDate": "01/02/2022",
+      "sale": 20,
+      "saleDate": "02/02/2022",
+      "cost": 15,
+      "name": "GUESS CONNECT WATCH",
+      "description": "cool watch",
+      "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "discontinued": false,
+      "availDate": "01/02/2022",
+      "category": "watch"
+    },
+    {
+      "price": 20,
+      "priceDate": "01/01/2022",
+      "map": 12,
+      "mapDate": "01/02/2022",
+      "sale": 20,
+      "saleDate": "02/02/2022",
+      "cost": 15,
+      "name": "'70s RETRO GLAM KEFIAH",
+      "description": "pretty scarf",
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+      "discontinued": false,
+      "availDate": "01/02/2022",
+      "category": "scarf"
+    }
+  ]
+}
