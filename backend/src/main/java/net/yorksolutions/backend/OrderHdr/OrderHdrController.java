@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/coupon")
+@RequestMapping("/orderHdr")
 @CrossOrigin
 public class OrderHdrController {
     OrderHdrService orderHdrService;
