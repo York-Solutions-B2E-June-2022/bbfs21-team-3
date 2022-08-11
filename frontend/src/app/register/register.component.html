@@ -1,0 +1,7 @@
+<div>
+  <input [(ngModel)]="username" placeholder=" enter valid username" type="text">
+  <input [(ngModel)]="password" placeholder=" enter valid password"type="text">
+  <input [(ngModel)]="role" placeholder="customer/admin/shopkeeper" type="text">
+  <button (click)="onRegister()" >Sign Up</button>
+  <div *ngIf="result">{{result}}</div>
+</div>
