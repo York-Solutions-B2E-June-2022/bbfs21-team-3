@@ -3,6 +3,8 @@ package net.yorksolutions.backend.Inventory;
 import net.yorksolutions.backend.Category.Category;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/inventory")
 @CrossOrigin
@@ -12,6 +14,12 @@ public class InventoryController {
 
     public InventoryController(InventoryService inventoryService) {
         this.inventoryService = inventoryService;
+    }
+
+    @GetMapping("/list")
+    public ArrayList<Inventory> list() {
+
+        return inventoryService.list();
     }
 
     @PostMapping("/create")

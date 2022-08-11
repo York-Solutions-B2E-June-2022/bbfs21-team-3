@@ -4,6 +4,7 @@ import net.yorksolutions.backend.Category.Category;
 import net.yorksolutions.backend.Category.CategoryRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Service
@@ -15,6 +16,11 @@ public class InventoryService {
     public InventoryService(InventoryRepository inventoryRepository, CategoryRepository categoryRepository) {
         this.inventoryRepository = inventoryRepository;
         this.categoryRepository = categoryRepository;
+    }
+
+    public ArrayList<Inventory> list() {
+
+        return new ArrayList<Inventory>(inventoryRepository.getAllBy());
     }
 
     public void create(InventoryReq requestBody) {
