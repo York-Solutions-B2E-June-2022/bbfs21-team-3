@@ -7,6 +7,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import {HeaderComponent} from "./header/header.component";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from "@angular/forms";
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     ProductListComponent,
     ProductComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        NgbModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

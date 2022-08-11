@@ -1,3 +1,12 @@
+<div *ngIf="!currentUser">
+  <app-login></app-login>
+  <app-register></app-register>
+  <app-product-list></app-product-list>
+</div>
 
+<div *ngIf="currentUser">
+  {{currentUser.username}}
+  {{currentUser.role}}
 <app-header></app-header>
 <app-product-list></app-product-list>
+</div>

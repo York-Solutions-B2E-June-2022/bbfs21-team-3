@@ -41,9 +41,12 @@ export class DataService {
       this.currentUser$.next(foundUser)
     }
   }
-  createUser(username: string, password: string): string {
-    if (!username || !password) {
-      return "username and password cannot be blank"
+  createUser(username: string, password: string, role: string): string {
+    if (!username || !password || !role) {
+      return "username, password, and/or role cannot be blank"
+    }
+    if (role !== "admin" && role !== "customer" && role !== "shopkeeper"){
+      return "invalid role, please type in admin"
     }
 
     if (username.length < 3 || password.length < 3) {
@@ -58,7 +61,8 @@ export class DataService {
     const newUser: IUser = {
       id: uuid(),
       username: username,
-      password: password
+      password: password,
+      role: role
     }
 
     this.userList.push(newUser);
