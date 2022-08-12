@@ -12,16 +12,16 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
 
-    int price;
+    Integer price;
     String priceDate;
 
-    int map;
+    Integer map;
     String mapDate;
 
-    int sale;
+    Integer sale;
     String saleDate;
 
-    int cost;
+    Integer cost;
 
     String name;
     String description;
@@ -37,6 +37,7 @@ public class Inventory {
     }
 
     public Inventory(InventoryReq inventoryReq) {
+
         this.price = inventoryReq.price;
         this.priceDate = inventoryReq.priceDate;
         this.map = inventoryReq.map;
@@ -52,7 +53,11 @@ public class Inventory {
         this.category = inventoryReq.category;
     }
 
-    public int getPrice() {
+    public Long getId() {
+        return id;
+    }
+
+    public Integer getPrice() {
         return price;
     }
 
@@ -60,7 +65,7 @@ public class Inventory {
         return priceDate;
     }
 
-    public int getMap() {
+    public Integer getMap() {
         return map;
     }
 
@@ -68,7 +73,7 @@ public class Inventory {
         return mapDate;
     }
 
-    public int getSale() {
+    public Integer getSale() {
         return sale;
     }
 
@@ -76,7 +81,7 @@ public class Inventory {
         return saleDate;
     }
 
-    public int getCost() {
+    public Integer getCost() {
         return cost;
     }
 

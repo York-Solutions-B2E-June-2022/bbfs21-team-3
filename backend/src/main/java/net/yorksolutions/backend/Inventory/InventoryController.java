@@ -26,19 +26,30 @@ public class InventoryController {
     public void create(@RequestBody InventoryReq requestBody) {
         inventoryService.create(requestBody);
     }
+
+    @DeleteMapping("/delete")
+    public void delete(@RequestBody InventoryReq requestBody) {
+        inventoryService.delete(requestBody.id);
+    }
+
+    @PatchMapping("/edit")
+    public void edit(@RequestBody InventoryReq requestBody) {
+        inventoryService.edit(requestBody);
+    }
 }
 
 class InventoryReq {
-    public int price;
+    public Long id;
+    public Integer price;
     public String priceDate;
 
-    public int map;
+    public Integer map;
     public String mapDate;
 
-    public int sale;
+    public Integer sale;
     public String saleDate;
 
-    public int cost;
+    public Integer cost;
 
     public String name;
     public String description;
