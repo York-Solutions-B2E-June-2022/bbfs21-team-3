@@ -25,9 +25,18 @@ public class CategoryController {
         categoryService.create(requestBody.category);
     }
 
+    @DeleteMapping("/delete")
+    public void delete(@RequestBody CategoryReq requestBody) {
+        categoryService.delete(requestBody.id);
+    }
+
+    @PatchMapping("/edit")
+    public void edit(@RequestBody CategoryReq requestBody) {
+        categoryService.edit(requestBody.id, requestBody.category);
+    }
 }
 
 class CategoryReq {
-
+    public Long id;
     public String category;
 }

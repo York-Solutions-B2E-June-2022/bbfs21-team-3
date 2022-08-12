@@ -35,7 +35,7 @@ export class CartComponent implements OnInit {
       this.total -= this.saleCost
     })
   }
-
+  
   ngOnInit(): void {
   }
 
