@@ -2,7 +2,7 @@
   <div class="product">
     <div class="header">
       <div>{{product.name}}</div>
-      <div>{{product.sale}}% off!</div>
+      <div *ngIf="product.discontinued == true">{{product.sale}}% off!</div>
     </div>
     <div class="header">{{product.description}}</div>
     <div class="body">
@@ -10,7 +10,8 @@
     </div>
     <div class="footer">
       <div>{{product.price | currency}}</div>
-      <button (click)="addToCart()">Add to Cart</button>
+      <button *ngIf="!inCart" (click)="addToCart()">Add to Cart</button>
+      <button *ngIf="inCart" (click)="removeFromCart()">Remove from Cart</button>
     </div>
   </div>
 </div>
