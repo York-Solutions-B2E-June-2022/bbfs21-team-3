@@ -5,7 +5,6 @@ import {IUser} from "./interfaces/IUser";
 import {Subject} from "rxjs";
 import { v4 as uuid } from 'uuid';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +13,7 @@ export class DataService {
   currentUser$ = new Subject<IUser | null>();
 
   productData: Array<IProduct> = dummyData.products
+  cart$ = new Subject<Array<IProduct>>()
   private cart: Array<IProduct> = []
   userList: Array<IUser> = []
 
@@ -24,11 +24,20 @@ export class DataService {
     return[...this.cart]
   }
   addItemToCart(item: IProduct) {
-    if (this.cart.length < 10){
-      this.cart.push(item)
+    this.cart.push(item)
+    this.cart$.next(this.cart)
+  }
+
+  removeItemFromCart(item: IProduct) {
+    const index = this.cart.findIndex((product) => {
+      return product.name === product.name
+    })
+
+    if (index !== -1) {
+      this.cart.splice(index, 1)
     }
 
-    console.log(this.cart)
+    this.cart$.next(this.cart)
   }
 
   onLogout() {

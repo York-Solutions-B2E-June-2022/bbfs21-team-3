@@ -9,12 +9,39 @@ import {IProduct} from "../interfaces/IProduct";
 })
 export class ProductListComponent implements OnInit {
   productList: Array<IProduct>;
+  selectedSort: String = ''
 
   constructor(private dataService: DataService) {
     this.productList = dataService.productData
   }
 
   ngOnInit(): void {
+  }
+
+  sort(selectedSort: String) {
+    this.selectedSort = selectedSort
+    this.productList = this.productList.sort(
+      (a, b) => {
+        if (selectedSort == 'least') {
+          if (a.price > b.price) return 1
+          if (a.price < b.price) return -1
+          return 0
+        }
+
+        if(selectedSort == 'most') {
+          if (a.price < b.price) return 1
+          if (a.price > b.price) return -1
+          return 0
+        }
+
+        if(selectedSort == 'onSale') {
+          if (a.discontinued ) return -1
+          if (!a.discontinued) return 1
+          return 0
+        }
+        return 0
+      }
+    )
   }
 
 }

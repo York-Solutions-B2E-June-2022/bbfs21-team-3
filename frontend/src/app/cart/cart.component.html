@@ -1,1 +1,8 @@
-<p>cart works!</p>
+<div *ngFor="let product of cartList">
+  <app-product [product]="product" [inCart]="true"></app-product>
+</div>
+<div>Subtotal: {{subtotal | currency}}</div>
+<div>Tax: + {{taxCost | currency}}</div>
+<div>Shipping + {{shippingCost | currency}}</div>
+<div>Sale: - {{saleCost | currency}}</div>
+<div>Total: {{total | currency}}</div>

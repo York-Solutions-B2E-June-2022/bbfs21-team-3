@@ -5,7 +5,6 @@
 }
 .product {
   border: 1px solid black;
-  border-right: 0.25rem;
 }
 
 .product > .header {
@@ -29,4 +28,5 @@
 
 .img {
   width: 15rem;
+  border: 1px solid gainsboro;
 }

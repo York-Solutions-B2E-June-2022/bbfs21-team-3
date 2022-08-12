@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
-import {HeaderComponent} from "./header/header.component";
+import { CartComponent } from './cart/cart.component';
+import { HeaderComponent } from "./header/header.component";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -16,14 +16,15 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     ProductListComponent,
     ProductComponent,
-    HeaderComponent,
-    RegisterComponent
+    CartComponent
   ],
     imports: [
-        BrowserModule,
-        NgbModule,
-        FormsModule
-    ],
+      BrowserModule,
+      HeaderComponent,
+      RegisterComponent
+      NgbModule,
+      FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -10,6 +10,7 @@ import {DataService} from "../data.service";
 export class ProductComponent implements OnInit {
 
   @Input() product!: IProduct
+  @Input() inCart: boolean = false
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -17,5 +18,9 @@ export class ProductComponent implements OnInit {
 
   addToCart() {
     this.dataService.addItemToCart(this.product)
+  }
+
+  removeFromCart() {
+    this.dataService.removeItemFromCart(this.product)
   }
 }
