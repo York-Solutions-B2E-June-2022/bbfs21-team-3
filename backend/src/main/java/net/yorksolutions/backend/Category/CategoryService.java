@@ -1,5 +1,6 @@
 package net.yorksolutions.backend.Category;
 
+import net.yorksolutions.backend.Account.Account;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -36,6 +37,32 @@ public class CategoryService {
         }
 
         Category category = new Category(catName);
+
+        categoryRepository.save(category);
+    }
+
+    public void delete(Long id) {
+
+        Optional<Category> existingCategory = categoryRepository.findById(id);
+
+        if (existingCategory.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+        }
+
+        categoryRepository.delete(existingCategory.get());
+
+    }
+
+    public void edit(Long id, String name) {
+        Optional<Category> existingCategory = categoryRepository.findById(id);
+
+        if (existingCategory.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+        }
+
+        Category category = existingCategory.get();
+
+        category.category = name;
 
         categoryRepository.save(category);
     }
